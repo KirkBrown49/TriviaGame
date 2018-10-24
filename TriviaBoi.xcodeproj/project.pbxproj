@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		4645168E217A2446007E5C72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645168D217A2446007E5C72 /* AppDelegate.swift */; };
-		46451690217A2446007E5C72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645168F217A2446007E5C72 /* ViewController.swift */; };
+		46451690217A2446007E5C72 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645168F217A2446007E5C72 /* QuizViewController.swift */; };
 		46451693217A2446007E5C72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46451691217A2446007E5C72 /* Main.storyboard */; };
 		46451695217A2448007E5C72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46451694217A2448007E5C72 /* Assets.xcassets */; };
 		46451698217A2448007E5C72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46451696217A2448007E5C72 /* LaunchScreen.storyboard */; };
+		464516A0217A2AB3007E5C72 /* AddViewQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645169F217A2AB3007E5C72 /* AddViewQuestionController.swift */; };
+		464516A2217A2B8A007E5C72 /* TriviaQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464516A1217A2B8A007E5C72 /* TriviaQuestion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4645168A217A2446007E5C72 /* TriviaBoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaBoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4645168D217A2446007E5C72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4645168F217A2446007E5C72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4645168F217A2446007E5C72 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		46451692217A2446007E5C72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46451694217A2448007E5C72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46451697217A2448007E5C72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46451699217A2448007E5C72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4645169F217A2AB3007E5C72 /* AddViewQuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewQuestionController.swift; sourceTree = "<group>"; };
+		464516A1217A2B8A007E5C72 /* TriviaQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaQuestion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +59,11 @@
 			isa = PBXGroup;
 			children = (
 				4645168D217A2446007E5C72 /* AppDelegate.swift */,
-				4645168F217A2446007E5C72 /* ViewController.swift */,
+				4645168F217A2446007E5C72 /* QuizViewController.swift */,
 				46451691217A2446007E5C72 /* Main.storyboard */,
+				4645169F217A2AB3007E5C72 /* AddViewQuestionController.swift */,
 				46451694217A2448007E5C72 /* Assets.xcassets */,
+				464516A1217A2B8A007E5C72 /* TriviaQuestion.swift */,
 				46451696217A2448007E5C72 /* LaunchScreen.storyboard */,
 				46451699217A2448007E5C72 /* Info.plist */,
 			);
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46451690217A2446007E5C72 /* ViewController.swift in Sources */,
+				46451690217A2446007E5C72 /* QuizViewController.swift in Sources */,
 				4645168E217A2446007E5C72 /* AppDelegate.swift in Sources */,
+				464516A2217A2B8A007E5C72 /* TriviaQuestion.swift in Sources */,
+				464516A0217A2AB3007E5C72 /* AddViewQuestionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
