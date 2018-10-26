@@ -57,7 +57,9 @@ class QuizViewController: UIViewController {
         let question2 = TriviaQuestion(question: "How is the weather?", answers: ["Good","Bad","Perfect","Chance of Death",] , correctAnswerIndex: 2 )
         let question3 = TriviaQuestion(question: "What is the best game", answers: ["FortNite","Call of Duty","PUBG","None of the others"], correctAnswerIndex: 3)
         let question4 = TriviaQuestion(question: "Who is the Creator of Captain America ", answers: ["Stan Lee","Jack Kirby","Malcolm Wheeler-Nicholson","Martin Goodman"], correctAnswerIndex: 1)
-        questions = [question1, question2, question3, question4]
+          let question5 = TriviaQuestion(question: "Which is the hotter pepper ", answers: ["Carolina Pepper","Dragon's Breath","7 Pot Douglah","Pepper X"], correctAnswerIndex: 3)
+          let question6 = TriviaQuestion(question: "What is short for binary digit ", answers: ["Bitty","Bit","010101","The answer you seek is not here"], correctAnswerIndex: 1)
+        questions = [question1, question2, question3, question4,question5,question6]
     }
     
     func getNewQuestion(){
