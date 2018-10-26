@@ -12,7 +12,7 @@
         <!--Quiz View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="QuizViewController" customModule="TriviaBoi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuizViewController" customModule="TriviaGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,22 +20,44 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="P5l-NP-Nv0">
                                 <rect key="frame" x="16" y="40" width="343" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPJ-aK-23F" customClass="QuizView">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPJ-aK-23F" customClass="QuizView">
                                         <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                        <color key="backgroundColor" red="0.99705451726913452" green="0.65650752054715256" blue="0.13313396499261732" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHu-Vx-bpq">
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHu-Vx-bpq">
                                         <rect key="frame" x="133" y="0.0" width="100" height="30"/>
-                                        <state key="normal" title="Add Question "/>
+                                        <color key="backgroundColor" red="0.60555584875371049" green="0.2268462901176253" blue="0.70639605319999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Add Question ">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="XzO-qY-S3o" kind="presentation" id="hg2-cd-z5S"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ya-Fn-rjU">
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ya-Fn-rjU">
                                         <rect key="frame" x="304" y="0.0" width="39" height="30"/>
-                                        <state key="normal" title="Reset"/>
+                                        <color key="backgroundColor" red="0.99705451730000005" green="0.65650752050000005" blue="0.13313396499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qJm-aM-0Pa"/>
                                         </connections>
@@ -45,44 +67,70 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="bWR-s8-xAf">
                                 <rect key="frame" x="35" y="130" width="305" height="320.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     What Makes a Trivia Question Trivial?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jby-eL-MOU">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     What Makes a Trivia Question Trivial?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jby-eL-MOU">
                                         <rect key="frame" x="0.0" y="0.0" width="305" height="20.5"/>
+                                        <color key="backgroundColor" red="0.99705451730000005" green="0.65650752050000005" blue="0.13313396499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twN-O7-gMG">
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twN-O7-gMG">
                                         <rect key="frame" x="120" y="65.5" width="65" height="30"/>
                                         <state key="normal" title="Answer A">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="answeredTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SSi-xF-SrL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFs-gZ-XmT">
+                                    <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFs-gZ-XmT">
                                         <rect key="frame" x="120" y="140.5" width="65" height="30"/>
                                         <state key="normal" title="Answer B">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="answeredTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kf5-5N-aUU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOq-lw-q3T">
+                                    <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOq-lw-q3T">
                                         <rect key="frame" x="119.5" y="215.5" width="66" height="30"/>
                                         <state key="normal" title="Answer C">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="answeredTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s8D-3u-xJ6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYm-CK-Kzh">
+                                    <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYm-CK-Kzh">
                                         <rect key="frame" x="119.5" y="290.5" width="66" height="30"/>
                                         <state key="normal" title="Answer D">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="answeredTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XEL-3N-Aw0"/>
                                         </connections>
@@ -90,7 +138,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.99870564975014398" green="1" blue="0.94310207256004219" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bWR-s8-xAf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="B7V-lQ-FcJ"/>
                             <constraint firstItem="bWR-s8-xAf" firstAttribute="top" secondItem="P5l-NP-Nv0" secondAttribute="bottom" constant="60" id="KUR-hH-CNc"/>
@@ -117,7 +165,7 @@
         <!--Add View Question Controller-->
         <scene sceneID="7qI-C8-BUG">
             <objects>
-                <viewController id="XzO-qY-S3o" customClass="AddViewQuestionController" customModule="TriviaBoi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XzO-qY-S3o" customClass="AddViewQuestionController" customModule="TriviaGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fu6-6C-Vi9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,12 +219,14 @@
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jaX-KJ-E27">
                                 <rect key="frame" x="68" y="561" width="238" height="29"/>
+                                <color key="backgroundColor" red="0.88118200700000004" green="1" blue="0.01434911962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
                                     <segment title="A"/>
                                     <segment title="B"/>
                                     <segment title="C"/>
                                     <segment title="D"/>
                                 </segments>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="265" translatesAutoresizingMaskIntoConstraints="NO" id="1wD-JS-yPX">
                                 <rect key="frame" x="16" y="20" width="343" height="30"/>
@@ -185,7 +235,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
                                         <color key="backgroundColor" red="0.59307582487309651" green="0.53580540923594011" blue="0.20634249996526136" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Cancel">
-                                            <color key="titleColor" red="0.76221446699999995" green="0.1395601829" blue="0.1140198151" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="cancelButtonTaped:" destination="XzO-qY-S3o" eventType="touchUpInside" id="adT-7Q-pQq"/>
@@ -195,7 +245,7 @@
                                         <rect key="frame" x="313" y="0.0" width="30" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Add">
-                                            <color key="titleColor" red="0.76221446699999995" green="0.1395601829" blue="0.1140198151" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="addTapped:" destination="XzO-qY-S3o" eventType="touchUpInside" id="Ecc-9r-K4w"/>
@@ -210,7 +260,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.98806513587334333" blue="0.93341776156196299" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.54869434930000005" green="0.52414632240000003" blue="0.70639605319999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="jaX-KJ-E27" firstAttribute="top" secondItem="3q4-KG-EBW" secondAttribute="bottom" constant="16" id="Dto-Qp-K9S"/>
                             <constraint firstItem="jaX-KJ-E27" firstAttribute="leading" secondItem="25Z-np-lnv" secondAttribute="leading" constant="68" id="F5m-lx-NDT"/>
