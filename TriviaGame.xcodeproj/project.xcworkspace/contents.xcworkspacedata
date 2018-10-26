@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TriviaBoi.xcodeproj">
+      location = "self:/Users/kirkbrown/Desktop/projects/TriviaBoi/TriviaGame.xcodeproj">
    </FileRef>
 </Workspace>

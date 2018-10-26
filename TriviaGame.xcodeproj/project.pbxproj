@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4645168A217A2446007E5C72 /* TriviaBoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaBoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4645168A217A2446007E5C72 /* TriviaGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4645168D217A2446007E5C72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4645168F217A2446007E5C72 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		46451692217A2446007E5C72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		4645168B217A2446007E5C72 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4645168A217A2446007E5C72 /* TriviaBoi.app */,
+				4645168A217A2446007E5C72 /* TriviaGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		46451689217A2446007E5C72 /* TriviaBoi */ = {
+		46451689217A2446007E5C72 /* TriviaGame */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4645169C217A2448007E5C72 /* Build configuration list for PBXNativeTarget "TriviaBoi" */;
+			buildConfigurationList = 4645169C217A2448007E5C72 /* Build configuration list for PBXNativeTarget "TriviaGame" */;
 			buildPhases = (
 				46451686217A2446007E5C72 /* Sources */,
 				46451687217A2446007E5C72 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = TriviaBoi;
+			name = TriviaGame;
 			productName = TriviaBoi;
-			productReference = 4645168A217A2446007E5C72 /* TriviaBoi.app */;
+			productReference = 4645168A217A2446007E5C72 /* TriviaGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 46451685217A2446007E5C72 /* Build configuration list for PBXProject "TriviaBoi" */;
+			buildConfigurationList = 46451685217A2446007E5C72 /* Build configuration list for PBXProject "TriviaGame" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				46451689217A2446007E5C72 /* TriviaBoi */,
+				46451689217A2446007E5C72 /* TriviaGame */,
 			);
 		};
 /* End PBXProject section */
@@ -296,7 +296,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kirkBrown.TriviaBoi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirkBrown.TriviaGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,7 +313,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kirkBrown.TriviaBoi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirkBrown.TriviaGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,7 +323,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		46451685217A2446007E5C72 /* Build configuration list for PBXProject "TriviaBoi" */ = {
+		46451685217A2446007E5C72 /* Build configuration list for PBXProject "TriviaGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4645169A217A2448007E5C72 /* Debug */,
@@ -332,7 +332,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4645169C217A2448007E5C72 /* Build configuration list for PBXNativeTarget "TriviaBoi" */ = {
+		4645169C217A2448007E5C72 /* Build configuration list for PBXNativeTarget "TriviaGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4645169D217A2448007E5C72 /* Debug */,

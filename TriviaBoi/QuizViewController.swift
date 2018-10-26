@@ -70,7 +70,13 @@ class QuizViewController: UIViewController {
     }
 }
 func showGameOverAlert(){
-    
+let endAlert = UIAlertController(title: "Trivia Results", message: "Game Over! Your score was \(score) out of \(questionsPlaceholder.count)", preferredStyle: UIAlertController.Style.alert)
+    let resetAction = UIAlertAction(title: "Reset", style: UIAlertAction.Style.default) {UIAlertAction
+        in
+      self.resetGame()
+    }
+    endAlert.addAction(resetAction)
+    self.present(endAlert,animated: true, completion: nil)
 }
 
 let backgroundColors = [
@@ -127,9 +133,20 @@ func showCorrectAnswerAlert(){
 
 func resetGame() {
     //need to reset game after adding new question
+    score = 0
+    if !questions.isEmpty {
+        questionsPlaceholder.append(contentsOf: questions)
+        questions.removeAll()
+    }
+    questions = questionsPlaceholder
+    questionsPlaceholder.removeAll()
+    getNewQuestion()
     
 }
-
+    @IBAction func resetTapped(_ sender: Any) {
+        resetGame()
+    }
+    
 @IBAction func unwindToQuizScreen(segue: UIStoryboardSegue){}
 
 }
