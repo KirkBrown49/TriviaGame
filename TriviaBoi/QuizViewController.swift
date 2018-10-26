@@ -50,7 +50,7 @@ class QuizViewController: UIViewController {
         
         
     }
-    
+    // the questions that are already in the game without the user adding their questions
     func populateQuestions(){
         let question1 = TriviaQuestion(question: "How it do?", answers: ["it do ","it dont","good","bad"], correctAnswerIndex: 0)
         
@@ -69,6 +69,7 @@ class QuizViewController: UIViewController {
            showGameOverAlert()
     }
 }
+    // after the user runs out of questions it will show the score they got and tell them that the game is now over
 func showGameOverAlert(){
 let endAlert = UIAlertController(title: "Trivia Results", message: "Game Over! Your score was \(score) out of \(questionsPlaceholder.count)", preferredStyle: UIAlertController.Style.alert)
     let resetAction = UIAlertAction(title: "Reset", style: UIAlertAction.Style.default) {UIAlertAction
@@ -78,7 +79,7 @@ let endAlert = UIAlertController(title: "Trivia Results", message: "Game Over! Y
     endAlert.addAction(resetAction)
     self.present(endAlert,animated: true, completion: nil)
 }
-
+// chosen colors
 let backgroundColors = [
     UIColor(red: 255/255, green: 80/255, blue: 80/255, alpha: 1.0),
     UIColor(red: 17/255, green: 137/255, blue: 127/255, alpha: 1.0),
@@ -86,7 +87,7 @@ let backgroundColors = [
     UIColor(red: 38/255, green: 75/255, blue: 202/255, alpha: 1.0),
     UIColor(red: 220/255, green: 18/255, blue: 73/255, alpha: 1.0)
 ]
-
+// the chosen colors will fill in the answer buttons with random colors
 func setNewColors(){
     let randomNumber = Int.random(in: 1...100)
     let randomColorA = backgroundColors[randomNumber % 4]
@@ -109,6 +110,7 @@ func setNewColors(){
         showIncorrectAnswerAlert()
     }
 }
+    // the showIncorrectAnswerAlert will show the user the correct answer if they guessed the wrong answer
 func showIncorrectAnswerAlert(){
     let incorrectAlert = UIAlertController(title: "Incorrect", message: "\(currentQuestion.correctAnswer) is the answer we were lokking for! Bad!", preferredStyle: .actionSheet)
     let okayAction = UIAlertAction(title: "...Sorry", style: UIAlertAction.Style.default) { UIAlertAction in
@@ -119,7 +121,7 @@ func showIncorrectAnswerAlert(){
     incorrectAlert.addAction(okayAction)
     self.present(incorrectAlert, animated: true, completion: nil)
 }
-
+// the showCorrectAnserAlert will pop up an alert show the correct answer to the user
 func showCorrectAnswerAlert(){
     let correctAlert = UIAlertController(title: "Correct", message: "\(currentQuestion.correctAnswer) is the correct answer! Good Work!", preferredStyle: .actionSheet)
     let okayAction = UIAlertAction(title: "Thank You", style: UIAlertAction.Style.default) { UIAlertAction in
@@ -133,7 +135,7 @@ func showCorrectAnswerAlert(){
 
 func resetGame() {
     //need to reset game after adding new question
-    score = 0
+    score = 0// reset the score back to 0
     if !questions.isEmpty {
         questionsPlaceholder.append(contentsOf: questions)
         questions.removeAll()
@@ -143,6 +145,7 @@ func resetGame() {
     getNewQuestion()
     
 }
+    // when the reset button is tapped it will call the reset func and reset
     @IBAction func resetTapped(_ sender: Any) {
         resetGame()
     }

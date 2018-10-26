@@ -42,7 +42,7 @@ class AddViewQuestionController: UIViewController {
     @IBAction func cancelButtonTaped(_ sender: Any) {
         self.performSegue(withIdentifier: "unwindSegueToQuizScreen", sender: self)
     }
-    
+    // this will allow the user to add the info in the add question screen and allow them to pick the correct answer
     @IBAction func addTapped(_ sender: Any) {
         guard
             let question = newQuestion.text, !question.isEmpty,
